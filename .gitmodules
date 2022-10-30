@@ -1,0 +1,7 @@
+[submodule "CM7/eez"]
+	path = CM7/eez
+	url = https://github.com/eez-open/eez-framework
+[submodule "CM7/lvgl"]
+	path = CM7/lvgl
+	url = https://github.com/lvgl/lvgl
+	branch = release/v8.3
