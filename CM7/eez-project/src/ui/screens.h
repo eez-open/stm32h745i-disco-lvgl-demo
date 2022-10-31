@@ -7,30 +7,17 @@
 extern "C" {
 #endif
 
-typedef struct _main_t {
-    lv_obj_t *screen_obj;
-    
-    lv_obj_t *obj_image_1;
-    lv_obj_t *obj_image_2;
-    lv_obj_t *obj_label_1;
-    lv_obj_t *obj_button_1;
-    lv_obj_t *obj_label_2;
-    lv_obj_t *obj_button_2;
-    lv_obj_t *obj_label_3;
-} main_t;
+typedef struct _objects_t {
+    lv_obj_t *main;
+    lv_obj_t *label_1;
+} objects_t;
 
-main_t *create_screen_main();
-void tick_screen_main(main_t *screen);
+extern objects_t objects;
 
+void create_screen_main();
+void tick_screen_main();
 
-typedef lv_obj_t **screen_t;
-
-enum {
-    SCREEN_MAIN,
-    NUM_SCREENS
-};
-
-screen_t get_screen(int screen_index);
+void create_screens();
 void tick_screen(int screen_index);
 
 

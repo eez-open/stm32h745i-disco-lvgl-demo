@@ -26,7 +26,7 @@ static lv_obj_t *getLvglObjectFromIndex(int32_t index) {
     if (index == -1) {
         return 0;
     }
-    return get_screen(currentScreen)[index];
+    return ((lv_obj_t **)&objects)[index];
 }
 
 static const void *getLvglImageByName(const char *name) {
@@ -40,7 +40,7 @@ static const void *getLvglImageByName(const char *name) {
 
 extern "C" void loadScreen(int index) {
     currentScreen = index;
-    lv_obj_t *screen = getLvglObjectFromIndex(0);
+    lv_obj_t *screen = getLvglObjectFromIndex(index);
     lv_scr_load_anim(screen, LV_SCR_LOAD_ANIM_FADE_IN, 200, 0, false);
 }
 
@@ -57,8 +57,10 @@ extern "C" void flowInit() {
 
     eez::flow::start(eez::g_mainAssets);
 
+    create_screens();
     replacePageHook(1, 0, 0, 0);
 #else
+    create_screens();
     loadScreen(0);
 #endif
 }
@@ -79,7 +81,7 @@ ActionExecFunc g_actionExecFunctions[] = { 0 };
 void replacePageHook(int16_t pageId, uint32_t animType, uint32_t speed, uint32_t delay) {
     eez::flow::onPageChanged(currentScreen + 1, pageId);
     currentScreen = pageId - 1;
-    lv_scr_load_anim(get_screen(currentScreen)[0], (lv_scr_load_anim_t)animType, speed, delay, false);
+    lv_scr_load_anim(getLvglObjectFromIndex(currentScreen), (lv_scr_load_anim_t)animType, speed, delay, false);
 }
 
 extern "C" void flowOnPageLoaded(int pageIndex) {
