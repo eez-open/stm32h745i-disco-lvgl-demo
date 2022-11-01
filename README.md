@@ -1,4 +1,6 @@
-# LVGL ported to the STM32H745I Discovery.
+# LVGL ported to the STM32H745I Discovery with EEZ Studio
+
+![Screenshot](screenshot.jpg)
 
 The [STM32H745I Discovery kit](https://www.st.com/en/evaluation-tools/stm32h745i-disco.html) is an affordable development board with:
 * 480x272 RGB interface LCD with capacitive multi-touch panel
