@@ -1,8 +1,23 @@
-#ifndef EEZ_LVGL_UI_FLOW_DEF_H
-#define EEZ_LVGL_UI_FLOW_DEF_H
+#pragma once
 
-#include <stdint.h>
+#include <eez/gui/data.h>
+#include <eez/gui/widget.h>
 
-extern const uint8_t assets[508];
+#include "lvgl/lvgl.h"
 
-#endif /*EEZ_LVGL_UI_FLOW_DEF_H*/
+namespace eez {
+
+enum ThemesEnum {
+    THEME_ID_DEFAULT = 0
+};
+
+enum ColorsEnum {
+    COLOR_ID_TRANSPARENT = 65535,
+    COLOR_ID_COLOR = 0,
+    COLOR_ID_BACKGROUND_COLOR = 1,
+	COLOR_ID_CUSTOM_UNDEFINED = 2
+};
+
+extern const uint8_t assets[1226];
+
+} // namespace eez
