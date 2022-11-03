@@ -3,8 +3,8 @@
 
 #include "lvgl/lvgl.h"
 
-extern const lv_img_dsc_t img_btn_move;
-extern const lv_img_dsc_t img_btn_z_botton;
+extern const lv_img_dsc_t img_log_eez;
+extern const lv_img_dsc_t img_logo_lvgl;
 
 typedef struct _ext_img_desc_t {
     const char *name;
