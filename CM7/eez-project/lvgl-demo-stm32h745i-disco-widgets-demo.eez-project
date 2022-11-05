@@ -62,7 +62,7 @@
           "template": "#include \"flow_def.h\"\n\nnamespace eez {\n\n//${eez-studio GUI_ASSETS_DEF_COMPRESSED}\n\n} // namespace eez\n"
         }
       ],
-      "destinationFolder": "src\\ui"
+      "destinationFolder": "src/ui"
     }
   },
   "variables": {
