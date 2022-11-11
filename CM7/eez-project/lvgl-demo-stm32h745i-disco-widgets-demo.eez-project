@@ -733,7 +733,7 @@
           "type": "LVGLLabelWidget",
           "left": 352,
           "top": 5,
-          "width": 32,
+          "width": 243,
           "height": 52,
           "customInputs": [],
           "customOutputs": [],
@@ -767,8 +767,8 @@
             }
           },
           "eventHandlers": [],
-          "text": "0",
-          "textType": "literal",
+          "text": "counter1",
+          "textType": "expression",
           "longMode": "WRAP",
           "recolor": false
         },
