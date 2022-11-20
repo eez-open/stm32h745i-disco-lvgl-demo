@@ -27,7 +27,7 @@
 #include "lvgl_port_touchpad.h"
 #include "lvgl/demos/lv_demos.h"
 
-#include "../../eez-project/src/flow.h"
+#include "../../eez-project/src/ui/ui.h"
 
 /* USER CODE END Includes */
 
@@ -187,7 +187,7 @@ int main(void)
 	LCD_init();
 	touchpad_init();
 	//lv_demo_widgets();
-    flowInit();
+    ui_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -199,7 +199,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 		HAL_Delay(5);
 		lv_task_handler();
-        flowTick();
+        ui_tick();
 	}
   /* USER CODE END 3 */
 }
