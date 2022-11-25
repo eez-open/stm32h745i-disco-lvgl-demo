@@ -1,5 +1,5 @@
 [submodule "CM7/eez"]
-	path = CM7/eez
+	path = CM7/eez-framework
 	url = https://github.com/eez-open/eez-framework
 [submodule "CM7/lvgl"]
 	path = CM7/lvgl
