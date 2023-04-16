@@ -183,6 +183,8 @@ int main(void)
 	BSP_QSPI_Init(0, &qspi_init);
 	BSP_QSPI_EnableMemoryMappedMode(0);
 
+    BSP_SDRAM_Init(0);
+
 	lv_init();
 	LCD_init();
 	touchpad_init();
