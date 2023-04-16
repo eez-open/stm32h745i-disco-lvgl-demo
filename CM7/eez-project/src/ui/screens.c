@@ -1527,7 +1527,7 @@ void create_user_widget_header(lv_obj_t *parent_obj, void *flowState, int startW
                     // face
                     lv_obj_t *obj = lv_img_create(parent_obj);
                     ((lv_obj_t **)&objects)[startWidgetIndex + 1] = obj;
-                    lv_obj_set_pos(obj, 10, 4);
+                    lv_obj_set_pos(obj, 10, 3);
                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                     lv_img_set_src(obj, &img_face_0);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST);
@@ -1537,7 +1537,7 @@ void create_user_widget_header(lv_obj_t *parent_obj, void *flowState, int startW
                 }
                 {
                     lv_obj_t *obj = lv_label_create(parent_obj);
-                    lv_obj_set_pos(obj, 52, 5);
+                    lv_obj_set_pos(obj, 47, 5);
                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                     lv_label_set_text(obj, "My home");
                     lv_obj_set_style_text_color(obj, lv_color_hex(0xffffffff), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -1545,7 +1545,7 @@ void create_user_widget_header(lv_obj_t *parent_obj, void *flowState, int startW
                 }
                 {
                     lv_obj_t *obj = lv_label_create(parent_obj);
-                    lv_obj_set_pos(obj, 52, 20);
+                    lv_obj_set_pos(obj, 47, 20);
                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                     lv_label_set_text(obj, "3 MEMBERS");
                     lv_obj_set_style_text_color(obj, lv_color_hex(0xffffffff), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -1555,7 +1555,7 @@ void create_user_widget_header(lv_obj_t *parent_obj, void *flowState, int startW
                     // arrow_account
                     lv_obj_t *obj = lv_img_create(parent_obj);
                     ((lv_obj_t **)&objects)[startWidgetIndex + 0] = obj;
-                    lv_obj_set_pos(obj, 102, 22);
+                    lv_obj_set_pos(obj, 97, 22);
                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                     lv_img_set_src(obj, &img_arrow_account);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CHECKABLE);

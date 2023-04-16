@@ -72,6 +72,8 @@ void LCD_init()
 
 	lv_disp_drv_init(&disp_drv);
 
+    disp_drv.sw_rotate = 1;
+
 	/*Set up the functions to access to your display*/
 
 	/*Set the resolution of the display*/
