@@ -88,7 +88,7 @@
         {
           "objID": "292907a7-7032-4814-e210-405def21551e",
           "fileName": "ui.c",
-          "template": "#include \"ui.h\"\n#include \"screens.h\"\n#include \"images.h\"\n#include \"flow_def.h\"\n\nvoid ui_init() {\n    eez_flow_init(assets, sizeof(assets), (lv_obj_t **)&objects, sizeof(objects), images, sizeof(images));\n}\n\nvoid ui_tick() {\n    eez_flow_tick();\n    tick_screen(g_currentScreen);\n}\n"
+          "template": "#include \"ui.h\"\n#include \"screens.h\"\n#include \"images.h\"\n#include \"flow_def.h\"\n\nvoid ui_init() {\n    eez_flow_init(assets, sizeof(assets), (lv_obj_t **)&objects, sizeof(objects), images, sizeof(images), 0);\n}\n\nvoid ui_tick() {\n    eez_flow_tick();\n    tick_screen(g_currentScreen);\n}\n"
         }
       ],
       "destinationFolder": "src\\ui",
@@ -1318,8 +1318,8 @@
         {
           "objID": "850d8d9f-73c0-4925-bcf2-06993c55fd64",
           "type": "LVGLActionComponent",
-          "left": 281,
-          "top": 524,
+          "left": 194,
+          "top": 304,
           "width": 299,
           "height": 55,
           "customInputs": [],
@@ -1329,7 +1329,7 @@
               "objID": "230642ec-9e73-4149-c7d7-aa604a3e4449",
               "action": "CHANGE_SCREEN",
               "screen": "security_screen",
-              "fadeMode": "NONE",
+              "fadeMode": "FADE_OUT",
               "speed": 0,
               "delay": 0
             }
@@ -1338,8 +1338,8 @@
         {
           "objID": "26368680-7fdf-4a7f-c47b-1467c66fc878",
           "type": "LVGLActionComponent",
-          "left": 281,
-          "top": 606,
+          "left": 194,
+          "top": 386,
           "width": 299,
           "height": 55,
           "customInputs": [],
@@ -1349,7 +1349,7 @@
               "objID": "607fd2db-fad5-4dfc-d257-6cb32994a3d8",
               "action": "CHANGE_SCREEN",
               "screen": "lighting_screen",
-              "fadeMode": "NONE",
+              "fadeMode": "FADE_OUT",
               "speed": 0,
               "delay": 0
             }
@@ -1780,7 +1780,7 @@
               "objID": "b154ad5d-61ce-4a31-da63-53fe48d1ca1f",
               "action": "CHANGE_SCREEN",
               "screen": "heating_screen",
-              "fadeMode": "NONE",
+              "fadeMode": "FADE_IN",
               "speed": 0,
               "delay": 0
             }
@@ -1800,7 +1800,7 @@
               "objID": "b7fb7c6f-1bee-465a-ef8b-f91f399c4727",
               "action": "CHANGE_SCREEN",
               "screen": "lighting_screen",
-              "fadeMode": "NONE",
+              "fadeMode": "FADE_IN",
               "speed": 0,
               "delay": 0
             }
@@ -2944,7 +2944,7 @@
               "objID": "4a59b4dc-03c0-467a-f269-3ea1ce2cd0fa",
               "action": "CHANGE_SCREEN",
               "screen": "heating_screen",
-              "fadeMode": "NONE",
+              "fadeMode": "FADE_IN",
               "speed": 0,
               "delay": 0
             }
@@ -2964,7 +2964,7 @@
               "objID": "0871ada0-e7a8-4b2d-8cf1-78b293a12aa5",
               "action": "CHANGE_SCREEN",
               "screen": "security_screen",
-              "fadeMode": "NONE",
+              "fadeMode": "FADE_IN",
               "speed": 0,
               "delay": 0
             }
@@ -4373,6 +4373,18 @@
           "customInputs": [],
           "customOutputs": [],
           "milliseconds": "500 / 3"
+        },
+        {
+          "objID": "983e1dda-4249-4d5f-8ce6-e4c8e14c4d85",
+          "type": "IsTrueActionComponent",
+          "left": 95,
+          "top": -298,
+          "width": 87,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "description": "",
+          "value": "true"
         }
       ],
       "connectionLines": [
@@ -4420,9 +4432,23 @@
         },
         {
           "objID": "c36136b9-8beb-4f87-cfdf-e2996ed488b4",
+          "source": "983e1dda-4249-4d5f-8ce6-e4c8e14c4d85",
+          "output": "False",
+          "target": "66bf0697-3322-450a-a352-752c92cf7c7d",
+          "input": "@seqin"
+        },
+        {
+          "objID": "57f7f352-b3cc-4a62-ebc2-1577af0a78db",
+          "source": "983e1dda-4249-4d5f-8ce6-e4c8e14c4d85",
+          "output": "True",
+          "target": "2a4c6bf5-30d0-4c9c-aad1-cbc0a616ce97",
+          "input": "@seqin"
+        },
+        {
+          "objID": "5023c4c6-ffaf-44e9-fbb9-d651ab62bce9",
           "source": "4dd10169-fcc8-4c8f-ae63-af82f055203d",
           "output": "variable",
-          "target": "66bf0697-3322-450a-a352-752c92cf7c7d",
+          "target": "983e1dda-4249-4d5f-8ce6-e4c8e14c4d85",
           "input": "@seqin"
         }
       ],

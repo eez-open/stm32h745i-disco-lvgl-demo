@@ -4,7 +4,7 @@
 #include "flow_def.h"
 
 void ui_init() {
-    eez_flow_init(assets, sizeof(assets), (lv_obj_t **)&objects, sizeof(objects), images, sizeof(images));
+    eez_flow_init(assets, sizeof(assets), (lv_obj_t **)&objects, sizeof(objects), images, sizeof(images), 0);
 }
 
 void ui_tick() {
