@@ -1,6 +1,6 @@
 # LVGL ported to the STM32H745I Discovery with EEZ Studio
 
-<img src="./screenshot.jpg" width="400" alt="STM32H745I Discovery board running LVGL with EEZ-Framework demo" title="STM32H745I Discovery board running LVGL with EEZ-Framework demo"/>
+<img src="./screenshot.png" width="400" alt="STM32H745I Discovery board running LVGL with EEZ-Framework demo" title="STM32H745I Discovery board running LVGL with EEZ-Framework demo"/>
 <img src="./studio.png" width="800" alt="STM32H745I Discovery demo project opened inside the EEZ Studio" title="STM32H745I Discovery demo project opened inside the EEZ Studio"/>
 
 The [STM32H745I Discovery kit](https://www.st.com/en/evaluation-tools/stm32h745i-disco.html) is an affordable development board with:
