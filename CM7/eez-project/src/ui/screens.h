@@ -11,39 +11,6 @@ typedef struct _objects_t {
     lv_obj_t *heating_screen;
     lv_obj_t *security_screen;
     lv_obj_t *lighting_screen;
-    lv_obj_t *_obj_image_10;
-    lv_obj_t *_obj_image_12;
-    lv_obj_t *_obj_image_14;
-    lv_obj_t *_obj_image_16;
-    lv_obj_t *_obj_image_24;
-    lv_obj_t *_obj_image_26;
-    lv_obj_t *_obj_image_28;
-    lv_obj_t *_obj_image_30;
-    lv_obj_t *_obj_image_32;
-    lv_obj_t *_obj_image_6;
-    lv_obj_t *_obj_image_8;
-    lv_obj_t *_obj_label_0;
-    lv_obj_t *_obj_label_1;
-    lv_obj_t *_obj_label_11;
-    lv_obj_t *_obj_label_13;
-    lv_obj_t *_obj_label_15;
-    lv_obj_t *_obj_label_17;
-    lv_obj_t *_obj_label_18;
-    lv_obj_t *_obj_label_2;
-    lv_obj_t *_obj_label_20;
-    lv_obj_t *_obj_label_21;
-    lv_obj_t *_obj_label_23;
-    lv_obj_t *_obj_label_25;
-    lv_obj_t *_obj_label_27;
-    lv_obj_t *_obj_label_29;
-    lv_obj_t *_obj_label_3;
-    lv_obj_t *_obj_label_31;
-    lv_obj_t *_obj_label_33;
-    lv_obj_t *_obj_label_4;
-    lv_obj_t *_obj_label_7;
-    lv_obj_t *_obj_label_9;
-    lv_obj_t *_obj_slider_22;
-    lv_obj_t *_obj_switch_19;
     lv_obj_t *account_box_1;
     lv_obj_t *account_box_1__account_box_container;
     lv_obj_t *account_box_1__account_box_image;
@@ -88,6 +55,39 @@ typedef struct _objects_t {
     lv_obj_t *lighting_button_1;
     lv_obj_t *lighting_button_2;
     lv_obj_t *lighting_button_3;
+    lv_obj_t *obj0;
+    lv_obj_t *obj1;
+    lv_obj_t *obj10;
+    lv_obj_t *obj11;
+    lv_obj_t *obj12;
+    lv_obj_t *obj13;
+    lv_obj_t *obj14;
+    lv_obj_t *obj15;
+    lv_obj_t *obj16;
+    lv_obj_t *obj17;
+    lv_obj_t *obj18;
+    lv_obj_t *obj19;
+    lv_obj_t *obj2;
+    lv_obj_t *obj20;
+    lv_obj_t *obj21;
+    lv_obj_t *obj22;
+    lv_obj_t *obj23;
+    lv_obj_t *obj24;
+    lv_obj_t *obj25;
+    lv_obj_t *obj26;
+    lv_obj_t *obj27;
+    lv_obj_t *obj28;
+    lv_obj_t *obj29;
+    lv_obj_t *obj3;
+    lv_obj_t *obj30;
+    lv_obj_t *obj31;
+    lv_obj_t *obj32;
+    lv_obj_t *obj33;
+    lv_obj_t *obj4;
+    lv_obj_t *obj6;
+    lv_obj_t *obj7;
+    lv_obj_t *obj8;
+    lv_obj_t *obj9;
     lv_obj_t *power_arc;
     lv_obj_t *power_background;
     lv_obj_t *save;
@@ -99,20 +99,29 @@ typedef struct _objects_t {
     lv_obj_t *temperature_background;
     lv_obj_t *watch;
     lv_obj_t *zone_selector_1;
-    lv_obj_t *zone_selector_1___obj_label_5;
     lv_obj_t *zone_selector_1__btn_next;
     lv_obj_t *zone_selector_1__btn_prev;
+    lv_obj_t *zone_selector_1__obj5;
     lv_obj_t *zone_selector_2;
-    lv_obj_t *zone_selector_2___obj_label_5;
     lv_obj_t *zone_selector_2__btn_next;
     lv_obj_t *zone_selector_2__btn_prev;
+    lv_obj_t *zone_selector_2__obj5;
     lv_obj_t *zone_selector_3;
-    lv_obj_t *zone_selector_3___obj_label_5;
     lv_obj_t *zone_selector_3__btn_next;
     lv_obj_t *zone_selector_3__btn_prev;
+    lv_obj_t *zone_selector_3__obj5;
 } objects_t;
 
 extern objects_t objects;
+
+enum ScreensEnum {
+    SCREEN_ID_HEATING_SCREEN = 1,
+    SCREEN_ID_SECURITY_SCREEN = 2,
+    SCREEN_ID_LIGHTING_SCREEN = 3,
+    SCREEN_ID_HEADER = 4,
+    SCREEN_ID_ACCOUNT_BOX = 5,
+    SCREEN_ID_ZONE_SELECTOR = 6,
+};
 
 void create_screen_heating_screen();
 void tick_screen_heating_screen();
